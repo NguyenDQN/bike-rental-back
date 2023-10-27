@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo Packaging JAR file...
+      - ./gradlew build
+  post_build:
+    commands:
+      - echo Build completed
+artifacts:
+  files:
+    - build/libs/bike-rental-back-0.0.1-SNAPSHOT.jar
