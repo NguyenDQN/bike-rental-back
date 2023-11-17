@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bike-rental-back-deployment
+spec:
+  selector:
+    matchLabels:
+      app: bike-rental-back
+  minReadySeconds: 5
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: bike-rental-back
+    spec:
+      containers:
+        - name: bike-rental-back
+          image: bike-rental-back:v0.0.3
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bike-rental-service
+spec:
+  selector:
+    app: bike-rental-back
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer
