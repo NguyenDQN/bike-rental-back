@@ -18,3 +18,6 @@ To run container on docker:
   
 Note: build a new jar -> build docker image -> update image in yaml file -> apply to kubectrl
 
+To get url of service:
+- kubectl get svc
+- minikube service service-name --url
