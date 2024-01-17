@@ -15,5 +15,6 @@ To run container on docker:
 - Run `kubectl apply -f k8s_deployment.yaml` to create a deployment
 - Expose deployment as service, port of service must be the same as port exposed port of the image
 - We can use `minikube image load my_image` to load image from our docker to minikube
+  
 Note: build a new jar -> build docker image -> update image in yaml file -> apply to kubectrl
 
