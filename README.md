@@ -1,7 +1,9 @@
 To build a new jar: ./gradlew build
+
 TO build docker image:
     cd to the folder contains DockerFiles
     docker build -t bike-rental-back:v0.0.1 .
+    
 To run container on docker:
     docker run -p 8080:80 bike-rental-back-v4
     8080: port on local machine
@@ -12,4 +14,6 @@ To run container on docker:
 - Build image `docker build . -t bike-rental-back`
 - Run `kubectl apply -f k8s_deployment.yaml` to create a deployment
 - Expose deployment as service, port of service must be the same as port exposed port of the image
+- We can use `minikube image load my_image` to load image from our docker to minikube
 Note: build a new jar -> build docker image -> update image in yaml file -> apply to kubectrl
+
