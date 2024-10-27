@@ -18,6 +18,8 @@ To run container on docker:
 - After apply the deployment, go to User-ws(https://github.com/NguyenDQN/user-ws) to apply the ingress
 
 Docs for ingress: https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
+
+Then we can access this url: https://bike-rental.nguyen/bike-ws/bikes
   
 Note: build a new jar -> build docker image -> update image in yaml file -> apply to kubectrl
 
